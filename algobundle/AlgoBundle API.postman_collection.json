@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "50912e72-af84-47ab-998f-06bcc161355c",
+		"name": "AlgoBundle API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45291998",
+		"_collection_link": "https://anshitajain-187606.postman.co/workspace/Anshita-Jain's-Workspace~d0654ce3-6bca-4fde-86b2-9b79336103c2/collection/45291998-50912e72-af84-47ab-998f-06bcc161355c?action=share&source=collection_link&creator=45291998"
+	},
+	"item": [
+		{
+			"name": "Post a Question",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Two Sum Problem\",\r\n  \"description\": \"Find two numbers that add up to a target\",\r\n  \"topic\": \"Arrays\",\r\n  \"difficulty\": \"Easy\",\r\n  \"link\": \"https://leetcode.com/problems/two-sum/\",\r\n  \"solved\": \"false\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dsa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all questions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/dsa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get question using ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/dsa/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update ",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Two Sum Updated\",\r\n  \"description\": \"Updated description\",\r\n  \"topic\": \"Arrays\",\r\n  \"difficulty\": \"Easy\",\r\n  \"link\": \"https://leetcode.com/problems/two-sum/\",\r\n  \"solved\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dsa/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by topic",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/dsa/search?topic=Arrays",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa",
+						"search"
+					],
+					"query": [
+						{
+							"key": "topic",
+							"value": "Arrays"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by difficulty",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/dsa/filter?difficulty=Easy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "difficulty",
+							"value": "Easy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete using ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Two Sum Updated\",\r\n  \"description\": \"Updated description\",\r\n  \"topic\": \"Arrays\",\r\n  \"difficulty\": \"Easy\",\r\n  \"link\": \"https://leetcode.com/problems/two-sum/\",\r\n  \"solved\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/dsa/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"dsa",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "admin123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
